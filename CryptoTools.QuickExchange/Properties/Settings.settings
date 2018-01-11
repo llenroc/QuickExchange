@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CryptoTools.QuickExchange.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BittrexApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">d14d3091cfbc457fbb946016a3a67948</Value>
+    </Setting>
+    <Setting Name="BittrexApiSecret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">e84c196a7388433b9dbbec0c44549fb0</Value>
+    </Setting>
+    <Setting Name="BinanceApiKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Ar5p04dWxD7d5zwjY2gxLFsP5fqwMLsgeTa88u6wKdD90GpnvP2TcP6wuZ626a3V</Value>
+    </Setting>
+    <Setting Name="BinanceApiSecret" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kB4RDe9athM9CMaCNhdLXVDkoxNotgDaPxuD9d3qPOgIlYsOsy3tEIo4H5jXxsvA</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F47DC8B9-0093-4862-9722-670569DAF4CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CryptoTools.Core</RootNamespace>
+    <AssemblyName>CryptoTools.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.1.0.0\lib\net451\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.1.0.0\lib\netstandard1.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Refit, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\refit.3.0.1\lib\net46\Refit.dll</HintPath>
+    </Reference>
+    <Reference Include="SuperSocket.ClientEngine, Version=0.9.0.0, Culture=neutral, PublicKeyToken=ee9af13f57f00acc, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSocket.ClientEngine.Core.0.9.0\lib\net45\SuperSocket.ClientEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.1.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.0.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.1.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.0.1\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.1.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.1.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.0.1\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.0.1\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.1.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.NameResolution.4.3.0\lib\net46\System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Security.4.3.0\lib\net46\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.1.0\lib\net462\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.1.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TA-Lib-Core, Version=1.0.4998.21369, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TA-Lib.0.5.0.3\lib\TA-Lib-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net, Version=0.15.1.10, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.15.1\lib\net45\WebSocket4Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\Binance\BinanceAbstractClient.cs" />
+    <Compile Include="Api\Binance\BinanceClient.cs" />
+    <Compile Include="Api\Binance\BinanceDefaults.cs" />
+    <Compile Include="Api\Binance\BinanceSocketClient.cs" />
+    <Compile Include="Api\Binance\Converters\DepositStatusConverter.cs" />
+    <Compile Include="Api\Binance\Converters\ExecutionTypeConverter.cs" />
+    <Compile Include="Api\Binance\Converters\KlineConverter.cs" />
+    <Compile Include="Api\Binance\Converters\KlineIntervalConverter.cs" />
+    <Compile Include="Api\Binance\Converters\OrderBookEntryConverter.cs" />
+    <Compile Include="Api\Binance\Converters\OrderRejectReasonConverter.cs" />
+    <Compile Include="Api\Binance\Converters\OrderSideConverter.cs" />
+    <Compile Include="Api\Binance\Converters\OrderStatusConverter.cs" />
+    <Compile Include="Api\Binance\Converters\OrderTypeConverter.cs" />
+    <Compile Include="Api\Binance\Converters\TimeInForceConverter.cs" />
+    <Compile Include="Api\Binance\Converters\TimestampConverter.cs" />
+    <Compile Include="Api\Binance\Converters\WithdrawalStatusConverter.cs" />
+    <Compile Include="Api\Binance\Errors\BinanceErrorKey.cs" />
+    <Compile Include="Api\Binance\Errors\BinanceErrors.cs" />
+    <Compile Include="Api\Binance\Events\ClosedEventArgs.cs" />
+    <Compile Include="Api\Binance\Events\ErroredEventArgs.cs" />
+    <Compile Include="Api\Binance\Events\MessagedEventArgs.cs" />
+    <Compile Include="Api\Binance\Extensions.cs" />
+    <Compile Include="Api\Binance\Implementations\BinanceSocket.cs" />
+    <Compile Include="Api\Binance\Implementations\Request.cs" />
+    <Compile Include="Api\Binance\Implementations\RequestFactory.cs" />
+    <Compile Include="Api\Binance\Implementations\Response.cs" />
+    <Compile Include="Api\Binance\Implementations\WebsocketFactory.cs" />
+    <Compile Include="Api\Binance\Interfaces\IRequest.cs" />
+    <Compile Include="Api\Binance\Interfaces\IRequestFactory.cs" />
+    <Compile Include="Api\Binance\Interfaces\IResponse.cs" />
+    <Compile Include="Api\Binance\Interfaces\IWebsocket.cs" />
+    <Compile Include="Api\Binance\Interfaces\IWebsocketFactory.cs" />
+    <Compile Include="Api\Binance\Logging\Log.cs" />
+    <Compile Include="Api\Binance\Logging\TraceTextWriter.cs" />
+    <Compile Include="Api\Binance\Objects\Binance24hPrice.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceAccountInfo.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceAggregatedTrades.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceApiResult.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceBookPrice.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceCanceledOrder.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceCheckTime.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceDepositList.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceError.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceExchangeInfo.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceKline.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceListenKey.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceOrder.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceOrderBook.cs" />
+    <Compile Include="Api\Binance\Objects\BinancePing.cs" />
+    <Compile Include="Api\Binance\Objects\BinancePlacedOrder.cs" />
+    <Compile Include="Api\Binance\Objects\BinancePrice.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamAccountInfo.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamConnection.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamDepth.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamEvent.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamKline.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamOrderUpdate.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceStreamTrade.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceTrade.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceWithdrawalList.cs" />
+    <Compile Include="Api\Binance\Objects\BinanceWithdrawalPlaced.cs" />
+    <Compile Include="Api\Binance\Objects\Enums.cs" />
+    <Compile Include="Api\Bittrex\BittrexApi.cs" />
+    <Compile Include="Api\Bittrex\BittrexClient.cs" />
+    <Compile Include="Api\Bittrex\Extensions.cs" />
+    <Compile Include="Api\Bittrex\Models\AccountBalance.cs" />
+    <Compile Include="Api\Bittrex\Models\ApiResult.cs" />
+    <Compile Include="Api\Bittrex\Models\BookOrder.cs" />
+    <Compile Include="Api\Bittrex\Models\Candle.cs" />
+    <Compile Include="Api\Bittrex\Models\CryptoCurrency.cs" />
+    <Compile Include="Api\Bittrex\Models\DepositAddress.cs" />
+    <Compile Include="Api\Bittrex\Models\HistoricAccountOrder.cs" />
+    <Compile Include="Api\Bittrex\Models\HistoricTrade.cs" />
+    <Compile Include="Api\Bittrex\Models\Market.cs" />
+    <Compile Include="Api\Bittrex\Models\MarketSummary.cs" />
+    <Compile Include="Api\Bittrex\Models\OpenOrder.cs" />
+    <Compile Include="Api\Bittrex\Models\OrderResult.cs" />
+    <Compile Include="Api\Bittrex\Models\Period.cs" />
+    <Compile Include="Api\Bittrex\Models\Ticker.cs" />
+    <Compile Include="Api\BlockChain\BlockChainApi.cs" />
+    <Compile Include="Api\BlockChain\IBlockChainApi.cs" />
+    <Compile Include="Api\BlockChain\Models\Prices.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Indicators\Adx.cs" />
+    <Compile Include="Indicators\AwesomeOscillator.cs" />
+    <Compile Include="Indicators\BaseIndicator.cs" />
+    <Compile Include="Indicators\Bbands.cs" />
+    <Compile Include="Indicators\BearBull.cs" />
+    <Compile Include="Indicators\Cci.cs" />
+    <Compile Include="Indicators\Cmo.cs" />
+    <Compile Include="Indicators\DerivativeOscillator.cs" />
+    <Compile Include="Indicators\Ema.cs" />
+    <Compile Include="Indicators\Fisher.cs" />
+    <Compile Include="Indicators\Macd.cs" />
+    <Compile Include="Indicators\Mama.cs" />
+    <Compile Include="Indicators\Mfi.cs" />
+    <Compile Include="Indicators\MinusDI.cs" />
+    <Compile Include="Indicators\Mom.cs" />
+    <Compile Include="Indicators\PlusDI.cs" />
+    <Compile Include="Indicators\Rsi.cs" />
+    <Compile Include="Indicators\Sar.cs" />
+    <Compile Include="Indicators\Sma.cs" />
+    <Compile Include="Indicators\Stoch.cs" />
+    <Compile Include="Indicators\StochFast.cs" />
+    <Compile Include="Indicators\StochRsi.cs" />
+    <Compile Include="Indicators\Tema.cs" />
+    <Compile Include="Indicators\Wma.cs" />
+    <Compile Include="Interfaces\INotificationManager.cs" />
+    <Compile Include="Interfaces\ITradeManager.cs" />
+    <Compile Include="Interfaces\ITradingStrategy.cs" />
+    <Compile Include="Models\Balance.cs" />
+    <Compile Include="Models\Candle.cs" />
+    <Compile Include="Models\CandleVariable.cs" />
+    <Compile Include="Models\ExchangeType.cs" />
+    <Compile Include="Models\MarketData.cs" />
+    <Compile Include="Models\Period.cs" />
+    <Compile Include="Models\ProfitType.cs" />
+    <Compile Include="Models\SellType.cs" />
+    <Compile Include="Models\Trade.cs" />
+    <Compile Include="NotificationManagers\SlackNotificationManager.cs" />
+    <Compile Include="NotificationManagers\TelegramNotificationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategies\AdxMomentum.cs" />
+    <Compile Include="Strategies\AdxSmas.cs" />
+    <Compile Include="Strategies\AwesomeMacd.cs" />
+    <Compile Include="Strategies\AwesomeSma.cs" />
+    <Compile Include="Strategies\Base150.cs" />
+    <Compile Include="Strategies\BbandRsi.cs" />
+    <Compile Include="Strategies\BigThree.cs" />
+    <Compile Include="Strategies\BigThreeTrend.cs" />
+    <Compile Include="Strategies\BreakoutMa.cs" />
+    <Compile Include="Strategies\CciEma.cs" />
+    <Compile Include="Strategies\CciRsi.cs" />
+    <Compile Include="Strategies\CciScalper.cs" />
+    <Compile Include="Strategies\DerivativeOscillator.cs" />
+    <Compile Include="Strategies\DoubleVolatility.cs" />
+    <Compile Include="Strategies\EmaAdx.cs" />
+    <Compile Include="Strategies\EmaAdxF.cs" />
+    <Compile Include="Strategies\EmaAdxMacd.cs" />
+    <Compile Include="Strategies\EmaAdxSmall.cs" />
+    <Compile Include="Strategies\EmaCross.cs" />
+    <Compile Include="Strategies\EmaStochRsi.cs" />
+    <Compile Include="Strategies\FaMaMaMa.cs" />
+    <Compile Include="Strategies\FifthElement.cs" />
+    <Compile Include="Strategies\FisherTransform.cs" />
+    <Compile Include="Strategies\Fractals.cs" />
+    <Compile Include="Strategies\FreqTrade.cs" />
+    <Compile Include="Strategies\MacdSma.cs" />
+    <Compile Include="Strategies\MacdTema.cs" />
+    <Compile Include="Strategies\Momentum.cs" />
+    <Compile Include="Strategies\PowerRanger.cs" />
+    <Compile Include="Strategies\RsiBbands.cs" />
+    <Compile Include="Strategies\RsiMacd.cs" />
+    <Compile Include="Strategies\RsiMacdAwesome.cs" />
+    <Compile Include="Strategies\RsiMacdMfi.cs" />
+    <Compile Include="Strategies\RsiSarAwesome.cs" />
+    <Compile Include="Strategies\SarAwesome.cs" />
+    <Compile Include="Strategies\SarRsi.cs" />
+    <Compile Include="Strategies\SarStoch.cs" />
+    <Compile Include="Strategies\SimpleBearBull.cs" />
+    <Compile Include="Strategies\SmaCrossover.cs" />
+    <Compile Include="Strategies\SmaSar.cs" />
+    <Compile Include="Strategies\SmaStochRsi.cs" />
+    <Compile Include="Strategies\StochAdx.cs" />
+    <Compile Include="Strategies\TheScalper.cs" />
+    <Compile Include="Strategies\ThreeMAgos.cs" />
+    <Compile Include="Strategies\TripleMa.cs" />
+    <Compile Include="Strategies\Wvf.cs" />
+    <Compile Include="Strategies\WvfExtended.cs" />
+    <Compile Include="Api\Binance\BinanceApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\refit.3.0.1\build\netstandard1.3\refit.targets" Condition="Exists('..\packages\refit.3.0.1\build\netstandard1.3\refit.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\refit.3.0.1\build\netstandard1.3\refit.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\refit.3.0.1\build\netstandard1.3\refit.targets'))" />
+  </Target>
+</Project>
